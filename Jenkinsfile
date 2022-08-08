@@ -14,6 +14,12 @@ pipeline{
                 sh 'mvn clean install -DskipTests'
             }
         }
+
+        stage('UNIT test'){
+            steps{
+                sh 'mvn test'
+            }
+        }
         
     }
 }
