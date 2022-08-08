@@ -11,18 +11,17 @@ pipeline{
     stages{
         stage('BUILD'){
             steps {
-                catchError(message: 'catch failure') { 
-                    script {
-                        sh 'mvn clean install -DskipTests'
-                    }
-                }
+                sh 'mvn clean install -DskipTests'
             }
         }
         post{
             steps{
                 success {
-                echo 'Now archiving...'
-                archiveArtifacts artifacts: "**/target/*.war"
+                    script{
+                        echo 'Now archiving...'
+                        archiveArtifacts artifacts: "**/target/*.war"
+                    }
+                
                 }
             }
 
