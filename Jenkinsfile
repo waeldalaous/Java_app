@@ -11,7 +11,11 @@ pipeline{
     stages{
         stage('BUILD'){
             steps {
-                sh 'mvn clean install -DskipTests'
+                catchError(message: 'catch failure') { 
+                    script {
+                        sh 'mvn clean install -DskipTests'
+                    }
+                }
             }
         }
         post{
