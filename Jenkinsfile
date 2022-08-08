@@ -15,9 +15,11 @@ pipeline{
             }
         }
         post{
-            success {
+            steps{
+                success {
                 echo 'Now archiving...'
                 archiveArtifacts artifacts: "**/target/*.war"
+                }
             }
 
         }
