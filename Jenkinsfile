@@ -17,7 +17,7 @@ pipeline{
 
         stage('UNIT test'){
             steps{
-                sh 'mvn -X test'
+                sh 'mvn test'
             }
         }
         
