@@ -1,8 +1,8 @@
 pipeline{
     agent any
-    /*tools{
-        maven ""
-    }*/
+    tools{
+        maven "mvn"
+    }
     environment{
         dockerRegistry = "waeldalaous/Java_app"
         registryCred = 'dockerhub'
