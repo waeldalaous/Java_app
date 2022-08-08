@@ -14,19 +14,6 @@ pipeline{
                 sh 'mvn clean install -DskipTests'
             }
         }
-        post{
-            steps{
-                success {
-                    script{
-                        echo 'Now archiving...'
-                        archiveArtifacts artifacts: "**/target/*.war"
-                    }
-                
-                }
-            }
-
-        }
         
-
     }
 }
