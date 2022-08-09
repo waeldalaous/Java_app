@@ -44,7 +44,23 @@ pipeline{
             }
         }
 
-        stage('Image build'){
+        stage('Code Analysis with SONARQUBE'){
+            steps{
+                def scannerHome = tool 'sonarScanner'
+                withSonarQubeEnv(credentialsId: 'sonarqube-token') {
+                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=java_app \
+                   -Dsonar.projectName=java_app \
+                   -Dsonar.projectVersion=1.0 \
+                   -Dsonar.sources=src/ \
+                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
+                   -Dsonar.junit.reportsPath=target/surefire-reports/ \
+                   -Dsonar.jacoco.reportsPath=target/jacoco.exec \
+                   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
+                }
+            }
+        }
+
+        stage('Image build & Image push'){
             steps{
                 script{
                     withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'docker_pass', usernameVariable: 'docker_user')]){
@@ -56,6 +72,11 @@ pipeline{
 
                         '''
                     }
+                }
+            }
+            post{
+                success{
+                    echo "image pushed to dockerhub"
                 }
             }
         }
