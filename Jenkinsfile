@@ -50,6 +50,7 @@ pipeline{
                     withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'docker_pass', usernameVariable: 'docker_user')]){
                         sh '''
                             docker login -u ${docker_user} -p ${docker_pass}
+                            docker build -t waeldalaous/java_app:$BUILD_NUMBER .
 
                         '''
                     }
