@@ -50,7 +50,11 @@ pipeline{
 
             }
             steps{
-                withSonarQubeEnv(credentialsId: 'sonarqube-token') {
+                withSonarQubeEnv(credentialsId: 'sonar_token') {
+                    echo "done"
+
+                }
+                /*withSonarQubeEnv(credentialsId: 'sonarqube-token') {
                     sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=java_app \
                    -Dsonar.projectName=java_app \
                    -Dsonar.projectVersion=1.0 \
@@ -59,7 +63,7 @@ pipeline{
                    -Dsonar.junit.reportsPath=target/surefire-reports/ \
                    -Dsonar.jacoco.reportsPath=target/jacoco.exec \
                    -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
-                }
+                }*/
             }
         }
 
