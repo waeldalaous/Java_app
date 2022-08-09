@@ -50,7 +50,7 @@ pipeline{
 
             }
             steps{
-                withSonarQubeEnv(credentialsId: 'sonar_token') {
+                withSonarQubeEnv(credentialsId: 'sonar_token', installationName: 'sonnarscanner') {
                     echo "done"
 
                 }
