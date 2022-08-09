@@ -45,8 +45,11 @@ pipeline{
         }
 
         stage('Code Analysis with SONARQUBE'){
+            environment{
+                scannerHome = tool 'sonarScanner'
+
+            }
             steps{
-                def scannerHome = tool 'sonarScanner'
                 withSonarQubeEnv(credentialsId: 'sonarqube-token') {
                     sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=java_app \
                    -Dsonar.projectName=java_app \
