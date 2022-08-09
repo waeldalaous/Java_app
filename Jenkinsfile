@@ -46,8 +46,9 @@ pipeline{
 
         stage('Image build'){
             steps{
-                script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://hub.docker.com/repository/docker/waeldalaous/java_app') {
+                    docker login -u $dockerhub -p $dockerhub
+                    
                 }
             }
         }
