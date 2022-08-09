@@ -47,9 +47,9 @@ pipeline{
         stage('Image build'){
             steps{
                 script{
-                    withDockerRegistry(credentialsId: 'dockerhub', url: 'https://hub.docker.com/repository/docker/waeldalaous/java_app'){
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'docker_pass', usernameVariable: 'docker_user')]){
                         sh '''
-                            docker login -u $dockerhub -p $dockerhub
+                            docker login -u ${docker_user} -p ${docker_pass}
 
                         '''
                     }
