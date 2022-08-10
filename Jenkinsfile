@@ -51,17 +51,17 @@ pipeline{
             }
             steps{
                 
-                withSonarQubeEnv(credentialsId: 'sonar_token',installationName: 'sonarqube-server') { 
-                    sh '''
-                    ${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=java_app \
-                    -Dsonar.projectName=java_app \
-                    -Dsonar.projectVersion=1.0 \
-                    -Dsonar.sources=src/ \
-                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
-                    -Dsonar.junit.reportsPath=target/surefire-reports/ \
-                    -Dsonar.jacoco.reportsPath=target/jacoco.exec \
-                    -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
-                    '''
+                withSonarQubeEnv(credentialsId: 'sonar_token',installationName: 'sonarqube-server') {
+                    withCredentials([string(credentialsId: 'Sonar', variable: 'sonar')]) {
+                        sh '''
+                            mvn sonar:sonar \
+                            -Dsonar.projectKey=java_app \
+                            -Dsonar.host.url=http://192.168.198.136:9000 \
+                            -Dsonar.login=$sonar
+                            '''
+
+                    } 
+                    
                 }
 
             }
