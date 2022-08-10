@@ -45,7 +45,7 @@ pipeline{
         }
 
         stage('SonarQube analysis') {
-            def scannerHome = tool 'SonarScanner 4.0'
+            def scannerHome = tool 'sonarScanner'
             steps{
                 
                 withSonarQubeEnv(credentialsId: 'sonar-token',installationName: 'sonarqube-server') { 
