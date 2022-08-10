@@ -44,7 +44,19 @@ pipeline{
             }
         }
 
-        stage('Code Analysis with SONARQUBE'){
+        stage('SonarQube analysis') {
+            def scannerHome = tool 'SonarScanner 4.0';
+            steps{
+                
+                withSonarQubeEnv('sonarqube-server') { 
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+
+            }
+            
+        }
+
+        /*stage('Code Analysis with SONARQUBE'){
             environment{
                 scannerHome = tool 'sonarScanner'
 
@@ -61,7 +73,7 @@ pipeline{
                    -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
                 }
             }
-        }
+        }*/
 
         stage('Image build & Image push'){
             steps{
