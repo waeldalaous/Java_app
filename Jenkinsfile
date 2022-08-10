@@ -44,7 +44,7 @@ pipeline{
             }
         }
 
-        stage('SonarQube analysis') {
+        stage('Code Analysis with SONARQUBE') {
             environment{
                 scannerHome = tool 'sonarScanner'
 
@@ -52,31 +52,23 @@ pipeline{
             steps{
                 
                 withSonarQubeEnv(credentialsId: 'sonar_token',installationName: 'sonarqube-server') { 
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    sh '''
+                    ${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=java_app \
+                    -Dsonar.projectName=java_app \
+                    -Dsonar.projectVersion=1.0 \
+                    -Dsonar.sources=src/ \
+                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
+                    -Dsonar.junit.reportsPath=target/surefire-reports/ \
+                    -Dsonar.jacoco.reportsPath=target/jacoco.exec \
+                    -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
+                    '''
                 }
 
             }
             
         }
 
-        /*stage('Code Analysis with SONARQUBE'){
-            environment{
-                scannerHome = tool 'sonarScanner'
-
-            }
-            steps{
-                withSonarQubeEnv(credentialsId: 'sonar_token', installationName: 'sonnarscanner') {
-                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=java_app \
-                   -Dsonar.projectName=java_app \
-                   -Dsonar.projectVersion=1.0 \
-                   -Dsonar.sources=src/ \
-                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
-                   -Dsonar.junit.reportsPath=target/surefire-reports/ \
-                   -Dsonar.jacoco.reportsPath=target/jacoco.exec \
-                   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
-                }
-            }
-        }*/
+        
 
         stage('Image build & Image push'){
             steps{
