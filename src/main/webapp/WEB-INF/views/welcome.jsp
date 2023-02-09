@@ -209,7 +209,7 @@
                     <div class="media">
                         <div class="pull-left">
                             <a href="#">
-                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
+                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
                             </a>
                         </div>
                         <div class="media-body">
@@ -223,10 +223,10 @@
                 <div class="panel-body">
                     <div class="pull-left">
                         <a href="#">
-                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
+                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
                         </a>
                     </div>
-                    <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a><small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4>
+                    <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a><small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4>
                     <span>
                         <div class="navbar-right">
                             <div class="dropdown">
@@ -251,10 +251,10 @@
                             <div class="panel-body">
                                 <div class="pull-left">
                                     <a href="#">
-                                        <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user2.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
+                                        <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user2.png" alt="" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
                                     </a>
                                 </div>
-                                <h4><a href="#" style="text-decoration:none;"><strong>Waheed Khan</strong></a> <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> about 10 hours ago</i></a></small></small></h4>
+                                <h4><a href="#" style="text-decoration:none;"><strong>Waheed Khan</strong></a> <small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> about 10 hours ago</i></a></small></small></h4>
                                 <hr>
                                 <div class="post-content">
                                      <p>What are DevOps skills?</p>
@@ -282,7 +282,7 @@
                     <div class="media">
                         <div class="pull-left">
                             <a href="#">
-                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
+                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
                             </a>
                         </div>
                         <div class="media-body">
@@ -296,10 +296,10 @@
                 <div class="panel-body">
                     <div class="pull-left">
                         <a href="#">
-                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
+                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
                         </a>
                     </div>
-                    <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a><small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4>
+                    <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a><small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4>
                     <span>
                         <div class="navbar-right">
                             <div class="dropdown">
@@ -321,7 +321,7 @@
                     <hr>
                     <div class="post-content">
                         <p>" Manager Reaction On Your Work without DevOps "</p>
-                        <img class="img-responsive" src="${contextPath}/resources/Images/user/giphy.gif">
+                        <img class="img-responsive" src="${contextPath}/resources/Images/user/giphy.gif" alt="">
                         <p><br><a href="#" class="tag">#  I want DevOps </a> <a href="#" class="tag">#  DevOps..</a></p>
                     </div>
                     <hr>
@@ -340,7 +340,7 @@
                     <div class="media">
                         <div class="pull-left">
                             <a href="#">
-                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
+                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
                             </a>
                         </div>
                         <div class="media-body">
@@ -354,10 +354,10 @@
                 <div class="panel-body">
                     <div class="pull-left">
                         <a href="#">
-                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
+                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;">
                         </a>
                     </div>
-                    <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a> <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4>
+                    <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a> <small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4>
                     <span>
                         <div class="navbar-right">
                             <div class="dropdown">
@@ -400,14 +400,14 @@
                                 <div class="panel-body">
                                     <div class="pull-left">
                                         <a href="#">
-                                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user2.png" width="35px" height="35px" style="margin-right:8px; margin-top:-5px;">
+                                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user2.png" alt="" width="35px" height="35px" style="margin-right:8px; margin-top:-5px;">
                                         </a>
                                     </div>
                                     <h4><a href="#" style="text-decoration:none;"><strong>Kiran Kumar</strong></a></h4>
                                     <hr>
                                     <div class="post-content">
                                         <p>DevOps has significant importance to any company delivering software or technical services today.Defining DevOps is trickier than you would think, primarily because of its wide usage. It is essentially shorthand, and nothing more than that, for a lean approach to software delivery.</p>
-                                        <br><small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 12 minutes ago</i></a></small></small>
+                                        <br><small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> 12 minutes ago</i></a></small></small>
                                     </div>
                                 </div>
                             </div>
@@ -418,14 +418,14 @@
                                 <div class="panel-body">
                                     <div class="pull-left">
                                         <a href="#">
-                                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user3.png" width="35px" height="35px" style="margin-right:8px; margin-top:-5px;">
+                                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user3.png" alt="" width="35px" height="35px" style="margin-right:8px; margin-top:-5px;">
                                         </a>
                                     </div>
                                     <h4><a href="#" style="text-decoration:none;"><strong>Mi Chleen</strong></a></h4>
                                     <hr>
                                     <div class="post-content">
                                         <p>The secret to DevOps maturity is not technology or process, but people. It takes engaged leadership and all for one cooperation to achieve the kind of results that lead companies to superior IT performance. High-performing DevOps teams can recover 168 times faster from failures and have 60 times fewer failures due to changes, according to the 2015 State of DevOps Report by Puppet Labs. High-performing teams also release code at significantly increasing velocity as their teams grow in size, approaching three deploys per day per developer, for teams of around 1000 developers.</p>
-                                        <br><small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 9 minutes ago</i></a></small></small>
+                                        <br><small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> 9 minutes ago</i></a></small></small>
                                     </div>
                                 </div>
                             </div>
@@ -436,14 +436,14 @@
                                 <div class="panel-body">
                                     <div class="pull-left">
                                         <a href="#">
-                                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="35px" height="35px" style="margin-right:8px; margin-top:-5px;">
+                                            <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" alt="" width="35px" height="35px" style="margin-right:8px; margin-top:-5px;">
                                         </a>
                                     </div>
                                     <h4><a href="#" style="text-decoration:none;"><strong>${pageContext.request.userPrincipal.name}</strong></a></h4>
                                     <hr>
                                     <div class="post-content">
                                         <p>At a time when the speed of application development is vital to commercial success, the DevOps methodology based on communication, collaboration, integration and automation has become one of the biggest IT moves around. However, it is more than just a business philosophy;to do it right requires genuine infrastructure investment and development.</p>
-                                        <br><small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</i></a></small></small>
+                                        <br><small><small><a href="#" style="text-decoration:none; color:grey;"><em><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</i></a></small></small>
                                     </div>
                                 </div>
                             </div>
@@ -452,7 +452,7 @@
                     <div class="media">
                         <div class="pull-left">
                             <a href="#">
-                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
+                                <img class="media-object img-circle" src="${contextPath}/resources/Images/user/user.png" width="35px" alt="" height="35px" style="margin-left:3px; margin-right:-5px;">
                             </a>
                         </div>
                         <div class="media-body">
