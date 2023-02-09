@@ -12,15 +12,9 @@ on:
 jobs:
   test-survey:
     runs-on: ubuntu-latest
-    if: github.event == 'refs/heads/main'
+    if: ${{ github.event }} == 'refs/heads/main'
     steps:
         - uses: actions/checkout@v3
         - name: Test
-          run: echo 'this step is concerned by the main branch'
-  test-model:
-    runs-on: ubuntu-latest
-    if: github.event == 'refs/heads/devops'
-    steps:
-        - uses: actions/checkout@v3
-        - name: Test
-          run: echo 'this step is concerned by the devops branch'
+          run: '${{ github.event }}'
+          #run: echo 'this step is concerned by the main branch'
