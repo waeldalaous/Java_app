@@ -12,14 +12,14 @@ on:
 jobs:
   test-survey:
     runs-on: ubuntu-latest
-    #if: ${{ github.head_ref == 'refs/heads/main' }}
+    if: ${{ github.ref_name == 'main' }}
     steps:
         - uses: actions/checkout@v3
         - name: Test
-          run: echo '${{ github.ref_name }}'
+          run: echo 'this step is concerned by the main branch'
   test-model:
     runs-on: ubuntu-latest
-    #if: ${{ github.head_ref == 'refs/heads/devops' }}
+    if: ${{ github.ref_name == 'devops' }}
     steps:
         - uses: actions/checkout@v3
         - name: Test
