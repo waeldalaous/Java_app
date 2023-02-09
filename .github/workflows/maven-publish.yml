@@ -11,8 +11,9 @@ on:
 
 jobs:
   test:
+    if: 
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v3
         - name: Test
-          run: echo 'pipeline running correctly !'
+          run: echo '${{ github.actor }}'
