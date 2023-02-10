@@ -29,4 +29,4 @@ jobs:
       - name: Show files changed
         run: cat $HOME/files.json
       - name: command
-        run: pwd
+        run: ll 
