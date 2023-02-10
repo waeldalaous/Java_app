@@ -30,3 +30,4 @@ jobs:
         run: cat $HOME/files.json
       - name: command
         run: ls -la 
+        run: pwd 
