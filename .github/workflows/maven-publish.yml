@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.3.0
-      - name: echo
-        run: echo '${{ github.repository }}'
+        with:
+          ref: '${{ github.ref_name }}'
