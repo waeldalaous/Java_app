@@ -10,17 +10,9 @@ on:
       - 'devops'
 
 jobs:
-  test-survey:
+  checkout:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'main' }}
     steps:
-        - uses: actions/checkout@v3
-        - name: Test
-          run: echo 'this step is concerned by the main branch'
-  test-model:
-    runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'devops' }}
-    steps:
-        - uses: actions/checkout@v3
-        - name: Test
-          run: echo 'this step is concerned by the devops branch'
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+        run: echo '${{ github.repository }}'
