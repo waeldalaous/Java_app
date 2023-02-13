@@ -18,15 +18,15 @@ jobs:
         uses: actions/checkout@v3.3.0
         with:
           ref: '${{ github.ref_name }}'
-  check-links:
-    runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'waeldalaous/Java_app'] }}
-    steps:
+      - name: comand:
+        run: echo '${{ secrets.PASSWORD_DOCKER }}'
+
+  check-changed-files:
+    runs-on: ubuntu-latest
       - name: Gather files changed
         uses: trilom/file-changes-action@a6ca26c14274c33b15e6499323aac178af06ad4b
         with:
           fileOutput: 'json'
-          
       - name: Show files changed
         run: cat $HOME/files.json
-      - name: command
-        run: cd /home/runner/work/Java_app && ls 
+
